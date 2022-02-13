@@ -14,5 +14,9 @@ def main():
     player_energy = 100 
     player_stress = 0
 
+    print(date)
+    print("Energy: " + str(player_energy))
+    print("Stress: " + str(player_stress)) 
+
 if __name__ == '__main__':
     main()
