@@ -18,5 +18,14 @@ def main():
     print("Energy: " + str(player_energy))
     print("Stress: " + str(player_stress)) 
 
+    print("What will you do?")
+    print("1) Check Email (Does not cost energy)")
+    print("2) Apply to a job (Cost: 20 energy 5 Stress)")
+    print("3) Cultural Interview Practice (UNDER CONSTRUCTION)")
+    print("4) Technical Interview Practice (UNDER CONSTRUCTION)")
+    print("5) Vidya Games (UNDER CONSTRUCTION)")
+    print("6) Sleep (Go to next Day, recover 100 energy (maxes at 100), relieve 25 stress")
+    player_input = input("Select your next action: ")
+    
 if __name__ == '__main__':
     main()
