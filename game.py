@@ -11,6 +11,13 @@ def apply_to_job():
     #player_energy = player_energy - 20
     #player_stress = player_stress + 5
 
+def go_to_sleep():
+    print("You go to bed and rest up for another day of job hunting.")
+    #player_energy = 100
+    #player_stress = player_stress - 25
+    #global date
+    #date += 1
+
 def display_stats():
     #Initialize date and several stats
     date = 1
@@ -43,11 +50,7 @@ def print_choices():
     elif player_input == "5":
         print("UNDER CONSTRUCTION")
     elif player_input == "6":
-        print("You go to bed and rest up for another day of job hunting.")
-        #player_energy = 100
-        #player_stress = player_stress - 25
-        #global date
-        #date += 1
+        go_to_sleep()
     else:
         print("Okay fine bye then!")
 
