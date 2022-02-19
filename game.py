@@ -1,5 +1,8 @@
 import time
 
+def start_game():
+    display_stats()
+    print_choices()
 
 def check_email():
     print("You have no messages from potential employers.  Better get more applications out!")
@@ -64,9 +67,7 @@ def main():
     print("THE RULES OF Job Hunter: To win Job Hunter all you need to do is accept an offer to work at any company!  Start by sending out applications, then work your way through numerous stages of interviews until you get a job offer!")
     print("Not a good enough offer?  Get a higher end game score by securing a better job!")
 
-    display_stats()
-    print_choices()
-
+    start_game()
     
 if __name__ == '__main__':
     main()
