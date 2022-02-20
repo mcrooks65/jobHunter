@@ -15,13 +15,19 @@ def check_email():
 
 def apply_to_job():
     print("Browsing around on Indeed.com you find a developer postion that ought to fit and go through the applicaiton process")
+    
     global application_count
-    application_count += 1
-    global player_energy  
-    player_energy = player_energy - 20
+    global player_energy 
     global player_stress
-    player_stress = player_stress + 5
-    start_game()
+
+    if player_energy < 20:
+        print("You're too tired to fill out anymore applicaitons today!  Go get some rest.")
+        start_game()
+    elif player_energy >= 20:
+        application_count += 1
+        player_energy = player_energy - 20
+        player_stress = player_stress + 5
+        start_game()
 
 def go_to_sleep():
     print("You go to bed and rest up for another day of job hunting.")
