@@ -55,8 +55,10 @@ def print_choices():
     elif player_input == "6":
         go_to_sleep()
     else:
-        print("Okay fine bye then!")
-
+        print("You need to select 1-6!")
+        time.sleep(1)
+        print_choices()
+        
 def main():
     print("Welcome to Job Hunter v0.1")
     time.sleep(1)
