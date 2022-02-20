@@ -1,5 +1,11 @@
 import time
 
+#Initialize date and several stats
+date = 1
+player_energy = 100 
+player_stress = 0
+application_count = 0
+
 def start_game():
     display_stats()
     print_choices()
@@ -9,10 +15,13 @@ def check_email():
 
 def apply_to_job():
     print("Browsing around on Indeed.com you find a developer postion that ought to fit and go through the applicaiton process")
-    #global application_count
-    #application_count = application_count + 1
-    #player_energy = player_energy - 20
-    #player_stress = player_stress + 5
+    global application_count
+    application_count += 1
+    global player_energy  
+    player_energy = player_energy - 20
+    global player_stress
+    player_stress = player_stress + 5
+    start_game()
 
 def go_to_sleep():
     print("You go to bed and rest up for another day of job hunting.")
@@ -22,15 +31,12 @@ def go_to_sleep():
     #date += 1
 
 def display_stats():
-    #Initialize date and several stats
-    date = 1
-    player_energy = 100 
-    player_stress = 0
-    application_count = 0
+    
 
     print("Day " + str(date))
     print("Energy: " + str(player_energy))
     print("Stress: " + str(player_stress)) 
+    print("Applications Sent: " + str(application_count))
 
 def print_choices():
     print("What will you do?")
