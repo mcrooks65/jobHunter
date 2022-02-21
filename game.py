@@ -33,10 +33,14 @@ def apply_to_job():
 
 def go_to_sleep():
     print("You go to bed and rest up for another day of job hunting.")
-    #player_energy = 100
-    #player_stress = player_stress - 25
-    #global date
-    #date += 1
+    global player_energy 
+    global player_stress
+    global date
+
+    player_energy = 100
+    player_stress = player_stress - 25
+    date += 1
+    action_menu()
 
 def display_stats():
     
