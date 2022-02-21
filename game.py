@@ -12,6 +12,8 @@ def action_menu():
 
 def check_email():
     print("You have no messages from potential employers.  Better get more applications out!")
+    time.sleep(1)
+    action_menu()
 
 def apply_to_job():
     print("Browsing around on Indeed.com you find a developer postion that ought to fit and go through the applicaiton process")
