@@ -28,7 +28,7 @@ def apply_to_job():
     elif player_energy >= 20:
         application_count += 1
         player_energy = player_energy - 20
-        player_stress = player_stress + 5
+        player_stress = player_stress + 10
         action_menu()
 
 def go_to_sleep():
@@ -43,8 +43,6 @@ def go_to_sleep():
     action_menu()
 
 def display_stats():
-    
-
     print("Day " + str(date))
     print("Energy: " + str(player_energy))
     print("Stress: " + str(player_stress)) 
