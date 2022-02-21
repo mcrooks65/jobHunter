@@ -6,7 +6,7 @@ player_energy = 100
 player_stress = 0
 application_count = 0
 
-def start_game():
+def action_menu():
     display_stats()
     print_choices()
 
@@ -22,12 +22,12 @@ def apply_to_job():
 
     if player_energy < 20:
         print("You're too tired to fill out anymore applicaitons today!  Go get some rest.")
-        start_game()
+        action_menu()
     elif player_energy >= 20:
         application_count += 1
         player_energy = player_energy - 20
         player_stress = player_stress + 5
-        start_game()
+        action_menu()
 
 def go_to_sleep():
     print("You go to bed and rest up for another day of job hunting.")
@@ -81,7 +81,7 @@ def main():
     print("THE RULES OF Job Hunter: To win Job Hunter all you need to do is accept an offer to work at any company!  Start by sending out applications, then work your way through numerous stages of interviews until you get a job offer!")
     print("Not a good enough offer?  Get a higher end game score by securing a better job!")
 
-    start_game()
+    action_menu()
     
 if __name__ == '__main__':
     main()
