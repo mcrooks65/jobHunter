@@ -5,6 +5,7 @@ date = 1
 player_energy = 100 
 player_stress = 0
 application_count = 0
+email_inbox = 0
 
 def action_menu():
     display_stats()
@@ -36,11 +37,17 @@ def go_to_sleep():
     global player_energy 
     global player_stress
     global date
+    global application_count
+    global email_inbox
 
     player_energy = 100
     player_stress = player_stress - 25
     date += 1
+    if application_count > 3: # Add chance to receive email of positive response from employer depending on how many applications were sent.
+        email_inbox += 1
+
     action_menu()
+    
 
 def display_stats():
     print("Day " + str(date))
