@@ -12,9 +12,16 @@ def action_menu():
     print_choices()
 
 def check_email():
-    print("You have no messages from potential employers.  Better get more applications out!")
-    time.sleep(1)
-    action_menu()
+    if email_inbox == 0:
+        print("You have no messages from potential employers.  Better get more applications out!")
+        time.sleep(1)
+        action_menu()
+    elif email_inbox == 1:
+        print("You have " + str(email_inbox) + " message in your inbox.")
+        time.sleep(1)
+        action_menu()
+    elif email_inbox >= 2:
+        print("You have " + str(email_inbox) + " messages in your inbox.")
 
 def apply_to_job():
     print("Browsing around on Indeed.com you find a developer postion that ought to fit and go through the applicaiton process")
@@ -43,7 +50,7 @@ def go_to_sleep():
     player_energy = 100
     player_stress = player_stress - 25
     date += 1
-    if application_count > 3: # Add chance to receive email of positive response from employer depending on how many applications were sent.
+    if application_count > 3: # Add chance to receive email of positive response from employer depending on how many applications were sent.  This will need to be adjusted... 
         email_inbox += 1
 
     action_menu()
