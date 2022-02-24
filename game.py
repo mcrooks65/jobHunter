@@ -41,6 +41,16 @@ def apply_to_job():
         player_stress = player_stress + 10
         action_menu()
 
+def play_vidya_games():
+    global player_stress
+    global player_energy
+
+    player_stress -= 50 # game playing currently removes 50 stress
+    player_energy = 0 # Once you start with games you don't stop, lose all energy for the day!
+    print("You sit down saying you'll just 'play for a little while', and then it's 3 AM and you've no choice but to sleep.")
+    time.sleep(1)
+    action_menu()
+
 def go_to_sleep():
     print("You go to bed and rest up for another day of job hunting.")
     global player_energy 
@@ -83,7 +93,7 @@ def print_choices():
     elif player_input == "4":
         print("UNDER CONSTRUCTION")
     elif player_input == "5":
-        print("UNDER CONSTRUCTION")
+        play_vidya_games()
     elif player_input == "6":
         go_to_sleep()
     else:
