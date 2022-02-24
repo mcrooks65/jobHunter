@@ -22,6 +22,8 @@ def check_email():
         action_menu()
     elif email_inbox >= 2:
         print("You have " + str(email_inbox) + " messages in your inbox.")
+        time.sleep(1)
+        action_menu()
 
 def apply_to_job():
     print("Browsing around on Indeed.com you find a developer postion that ought to fit and go through the applicaiton process")
