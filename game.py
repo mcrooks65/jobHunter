@@ -88,7 +88,7 @@ def print_choices():
     print("2) Apply to a job (Cost: 20 energy 5 Stress)")
     print("3) Cultural Interview Practice (UNDER CONSTRUCTION)")
     print("4) Technical Interview Practice (UNDER CONSTRUCTION)")
-    print("5) Vidya Games (UNDER CONSTRUCTION)")
+    print("5) Vidya Games (Removes up to 50 stress.  Energy will be depleted!)")
     print("6) Sleep (Go to next Day, recover 100 energy (maxes at 100), relieve 25 stress")
     player_input = input("Select your next action: ")
     
