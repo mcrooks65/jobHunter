@@ -45,11 +45,19 @@ def play_vidya_games():
     global player_stress
     global player_energy
 
-    player_stress -= 50 # game playing currently removes 50 stress
-    player_energy = 0 # Once you start with games you don't stop, lose all energy for the day!
-    print("You sit down saying you'll just 'play for a little while', and then it's 3 AM and you've no choice but to sleep.")
-    time.sleep(1)
-    action_menu()
+    if player_energy == 0:
+        print("You're too tired to play games, you should really just go to bed.")
+        time.sleep(1)
+        action_menu()
+    else:
+        player_energy = 0 # Once you start with games you don't stop, lose all energy for the day!
+        if player_stress >= 50:
+            player_stress -= 50 # game playing currently removes 50 stress
+        else:
+            player_stress = 0 # 0 out stress if it's less than 50
+        print("You sit down saying you'll just 'play for a little while', and then it's 3 AM and you've no choice but to sleep.")
+        time.sleep(1)
+        action_menu()
 
 def go_to_sleep():
     print("You go to bed and rest up for another day of job hunting.")
