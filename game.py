@@ -68,7 +68,10 @@ def go_to_sleep():
     global email_inbox
 
     player_energy = 100
-    player_stress = player_stress - 25
+    if player_stress <= 25:
+        player_stress = 0
+    else:
+        player_stress = player_stress - 25
     date += 1
     if application_count > 3: # Add chance to receive email of positive response from employer depending on how many applications were sent.  This will need to be adjusted... 
         email_inbox += 1
