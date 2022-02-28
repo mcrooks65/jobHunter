@@ -13,6 +13,8 @@ def action_menu():
 
 def check_email():
     global date 
+    global email_inbox
+
     if email_inbox == 0:
         print("You have no messages from potential employers.  Better get more applications out!")
         time.sleep(1)
@@ -22,11 +24,19 @@ def check_email():
         time.sleep(1)
         player_input = input("Will you open this message? ")
         if player_input == 'y':
-            print("you got a response from Techrosoft!  They'd like to schedule a cultural interview for Day " + (str(date + 3)))
+            print("you got a response from Techrosoft!  They'd like to schedule a cultural interview to see if you'd be a good fit!" )
             time.sleep(1)
+            print("You tap out a response email and secure the interview for Day " + (str(date + 3)))
+            time.sleep(1)
+            print("Good work!  Securing interviews is a neccessary first step to landing a job!")  #If i'm going to add a point system this ought to be one of the things that adds score.
+            time.sleep(1)
+            email_inbox -= email_inbox
         elif player_input == 'n':
             print("You decide you'd rather not go forward with the offer and delete the email")
             time.sleep(1)
+            email_inbox -= email_inbox
+            print("You can't help but feel like this is counter productive...")
+            time.sleep(1) 
             action_menu()
         else:
             print("You will need to respond with 'y' or 'n'.")
