@@ -12,6 +12,7 @@ def action_menu():
     print_choices()
 
 def check_email():
+    global date 
     if email_inbox == 0:
         print("You have no messages from potential employers.  Better get more applications out!")
         time.sleep(1)
@@ -19,6 +20,18 @@ def check_email():
     elif email_inbox == 1:
         print("You have " + str(email_inbox) + " message in your inbox.")
         time.sleep(1)
+        player_input = input("Will you open this message? ")
+        if player_input == 'y':
+            print("you got a response from Techrosoft!  They'd like to schedule a cultural interview for Day " + (str(date + 3)))
+            time.sleep(1)
+        elif player_input == 'n':
+            print("You decide you'd rather not go forward with the offer and delete the email")
+            time.sleep(1)
+            action_menu()
+        else:
+            print("You will need to respond with 'y' or 'n'.")
+            time.sleep(1)
+    
         action_menu()
     elif email_inbox >= 2:
         print("You have " + str(email_inbox) + " messages in your inbox.")
