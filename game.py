@@ -46,6 +46,25 @@ def check_email():
     elif email_inbox >= 2:
         print("You have " + str(email_inbox) + " messages in your inbox.")
         time.sleep(1)
+        player_input = input("Will you open the top message? ")
+        if player_input == 'y':
+            print("you got a response from Techrosoft!  They'd like to schedule a cultural interview to see if you'd be a good fit!" )
+            time.sleep(1)
+            print("You tap out a response email and secure the interview for Day " + (str(date + 3)))
+            time.sleep(1)
+            print("Good work!  Securing interviews is a neccessary first step to landing a job!")  #If i'm going to add a point system this ought to be one of the things that adds score.
+            time.sleep(1)
+            email_inbox = email_inbox -1
+        elif player_input == 'n':
+            print("You decide you'd rather not go forward with the offer and delete the email")
+            time.sleep(1)
+            email_inbox = email_inbox -1
+            print("You can't help but feel like this is counter productive...")
+            time.sleep(1) 
+            action_menu()
+        else:
+            print("You will need to respond with 'y' or 'n'.")
+            time.sleep(1)
         action_menu()
 
 def apply_to_job():
