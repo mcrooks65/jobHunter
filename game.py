@@ -1,3 +1,9 @@
+# TODO 
+# Save schedule interview date so when the day arrives it starts with the interview.  Will require new interview function to run when day matches.
+# Add cultural interivew practice function and new stat to gauge cultural interview aptitutde.  (Number based skills rating 1 is novice 5 can be max)
+# Add technical interview schedule follow up email message, to schedule the technical interview.
+# Add technical interview practice function and new stat to gauge technical interview aptitutde.  (Number based skills rating 1 is novice 5 can be max)
+
 import time
 
 #Initialize date and several stats
@@ -24,7 +30,7 @@ def check_email():
         time.sleep(1)
         player_input = input("Will you open this message? ")
         if player_input == 'y':
-            print("you got a response from Techrosoft!  They'd like to schedule a cultural interview to see if you'd be a good fit!" )
+            print("You got a response from Techrosoft!  They'd like to schedule a cultural interview to see if you'd be a good fit!" )
             time.sleep(1)
             print("You tap out a response email and secure the interview for Day " + (str(date + 3)))
             time.sleep(1)
@@ -48,7 +54,7 @@ def check_email():
         time.sleep(1)
         player_input = input("Will you open the top message? ")
         if player_input == 'y':
-            print("you got a response from Techrosoft!  They'd like to schedule a cultural interview to see if you'd be a good fit!" )
+            print("You got a response from Techrosoft!  They'd like to schedule a cultural interview to see if you'd be a good fit!" )
             time.sleep(1)
             print("You tap out a response email and secure the interview for Day " + (str(date + 3)))
             time.sleep(1)
