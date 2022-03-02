@@ -1,8 +1,11 @@
 # TODO 
 # Save schedule interview date so when the day arrives it starts with the interview.  Will require new interview function to run when day matches.
+# Create Cultural Interview function, will run first thing on scheduled days.  
 # Add cultural interivew practice function and new stat to gauge cultural interview aptitutde.  (Number based skills rating 1 is novice 5 can be max)
 # Add technical interview schedule follow up email message, to schedule the technical interview.
+# Create Technical Interview function, will run first thing on scheduled days.
 # Add technical interview practice function and new stat to gauge technical interview aptitutde.  (Number based skills rating 1 is novice 5 can be max)
+# May need to add new selection to action_menu() to view current schedule.
 
 import time
 
