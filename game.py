@@ -15,6 +15,7 @@ player_energy = 100
 player_stress = 0
 application_count = 0
 email_inbox = 0
+cult_int_date = []
 
 def action_menu():
     display_stats()
@@ -36,6 +37,9 @@ def check_email():
             print("You got a response from Techrosoft!  They'd like to schedule a cultural interview to see if you'd be a good fit!" )
             time.sleep(1)
             print("You tap out a response email and secure the interview for Day " + (str(date + 3)))
+            cult_int_date.append(date+3)
+            time.sleep(1)
+            print("You make sure to put the interview in your calender... Got it! All set for Day " + str(cult_int_date.pop()))
             time.sleep(1)
             print("Good work!  Securing interviews is a neccessary first step to landing a job!")  #If i'm going to add a point system this ought to be one of the things that adds score.
             time.sleep(1)
