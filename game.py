@@ -1,5 +1,6 @@
 # TODO 
-# Save schedule interview date so when the day arrives it starts with the interview.  Will require new interview function to run when day matches.
+# DONE Save schedule interview date   # STORING IN AN ARRAY FOR MULTIPLE DATES
+# Still requires new interview function to run when day matches.
 # Create Cultural Interview function, will run first thing on scheduled days.  
 # Add cultural interivew practice function and new stat to gauge cultural interview aptitutde.  (Number based skills rating 1 is novice 5 can be max)
 # Add technical interview schedule follow up email message, to schedule the technical interview.
@@ -180,4 +181,4 @@ def main():
     action_menu()
     
 if __name__ == '__main__':
-    main()
+    main() 
