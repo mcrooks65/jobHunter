@@ -25,6 +25,7 @@ def action_menu():
 def check_email():
     global date 
     global email_inbox
+    global cult_int_date
 
     if email_inbox == 0:
         print("You have no messages from potential employers.  Better get more applications out!")
@@ -38,7 +39,7 @@ def check_email():
             print("You got a response from Techrosoft!  They'd like to schedule a cultural interview to see if you'd be a good fit!" )
             time.sleep(1)
             print("You tap out a response email and secure the interview for Day " + (str(date + 3)))
-            cult_int_date.append(date+3)
+            cult_int_date.append(date+3) # WHY WONT THIS UPDATE? >_<  It's fine till it exits the function.
             time.sleep(1)
             print("You make sure to put the interview in your calender... Got it! All set for Day " + str(cult_int_date.pop()))
             time.sleep(1)
@@ -122,6 +123,7 @@ def go_to_sleep():
     global date
     global application_count
     global email_inbox
+    global cult_int_date
 
     player_energy = 100
     if player_stress <= 25:
@@ -132,9 +134,21 @@ def go_to_sleep():
     if application_count > 3: # Add chance to receive email of positive response from employer depending on how many applications were sent.  This will need to be adjusted... 
         email_inbox += 1
 
+    ## WIP
+    # if not cult_int_date: #Handles in case of empty array.
+    #     print("Good Morning!  You have no cultural interviews scheduled today.")
+    #     time.sleep(1)
+    # else:
+    #     if date != cult_int_date[0]:
+    #         print("Good Morning!  You have no cultural interviews scheduled today.")
+    #         time.sleep(1)
+    #     else:
+    #         Print("Good Morning!  You have a cultural interview today!")
+    #         time.sleep(1)
+    #         # cultural_interview() ##!Still need to define!
+
     action_menu()
     
-
 def display_stats():
     print("Day " + str(date))
     print("Energy: " + str(player_energy))
@@ -163,6 +177,8 @@ def print_choices():
         play_vidya_games()
     elif player_input == "6":
         go_to_sleep()
+    elif player_input == "7":
+        print(cult_int_date)
     else:
         print("You need to select 1-6!")
         time.sleep(1)
