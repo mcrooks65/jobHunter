@@ -150,7 +150,13 @@ def go_to_sleep():
     action_menu()
     
 def display_stats():
+    # global cult_int_date
+
     print("Day " + str(date))
+    # if len(cult_int_date) == 0:
+    #     print("You have no interviews scheduled.")
+    # else:
+    #     print("Upcoming Interview(s): " + cult_int_date[0])
     print("Energy: " + str(player_energy))
     print("Stress: " + str(player_stress)) 
     print("Applications Sent: " + str(application_count))
